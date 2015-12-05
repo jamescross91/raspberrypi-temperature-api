@@ -25,7 +25,7 @@ public class AddTemperatureResource extends ServerResource {
     }
 
     @Post
-    public Representation acceptItem(Representation entity) throws IOException {
+    public Representation acceptItem(Representation entity) throws IOException, JSONException {
         JSONObject json = new JsonRepresentation(entity).getJsonObject();
 
         String validation = validateJson(json);
