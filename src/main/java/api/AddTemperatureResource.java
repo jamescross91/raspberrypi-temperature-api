@@ -39,7 +39,7 @@ public class AddTemperatureResource extends ServerResource {
     }
 
     private void saveData(JSONObject jsonObject) throws JSONException {
-        int temp = jsonObject.getInt("temp");
+        double temp = jsonObject.getDouble("temp") / 1000;
         String sensorAddress = jsonObject.getString("sensorAddress");
         TemperatureItem temperatureItem = new TemperatureItem(temp, sensorAddress);
 

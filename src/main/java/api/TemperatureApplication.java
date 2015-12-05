@@ -22,7 +22,7 @@ public class TemperatureApplication extends Application {
         corsFilter.setAllowedOrigins(allowedOrigins);
 
         //Registration and login
-        router.attach("/addTemp", AddTemperatureResource.class);
+        router.attach("/addtemp", AddTemperatureResource.class);
         return corsFilter;
     }
 }
